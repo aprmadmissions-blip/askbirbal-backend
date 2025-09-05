@@ -32,6 +32,11 @@ const openai = new OpenAI({
 
 // --- Endpoints ---
 
+// Root endpoint
+app.get('/', (req, res) => {
+  res.status(200).json({ message: 'Welcome to the Ask Birbal API!' });
+});
+
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok', message: 'Server is healthy' });
